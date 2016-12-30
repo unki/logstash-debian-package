@@ -1,0 +1,5 @@
+logstash (5.1.1-1~unki.1) stretch; urgency=medium
+
+  * package for upstream release 5.1.1
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Fri, 30 Dec 2016 19:33:45 +0100

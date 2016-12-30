@@ -1,0 +1,3 @@
+/etc/logstash/jvm.options
+/etc/logstash/logstash.yml
+/etc/logstash/startup.options

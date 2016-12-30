@@ -1,0 +1,9 @@
+config/* /etc/logstash/
+logstash-core-queue-jruby /usr/share/logstash/
+logstash-core-event-java /usr/share/logstash/
+logstash-core-plugin-api /usr/share/logstash/
+logstash-core /usr/share/logstash/
+lib /usr/share/logstash/
+bin /usr/share/logstash/
+vendor /usr/share/logstash/
+

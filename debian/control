@@ -10,5 +10,5 @@ Vcs-git: https://github.com/elastic/logstash.git
 
 Package: logstash
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby-ci-reporter-rspec
 Description: Logstash - transport and process your logs, events, or other data

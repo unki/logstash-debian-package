@@ -6,4 +6,4 @@ logstash-core /usr/share/logstash/
 lib /usr/share/logstash/
 bin /usr/share/logstash/
 vendor /usr/share/logstash/
-
+Gemfile /usr/share/logstash/

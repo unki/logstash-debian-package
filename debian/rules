@@ -28,6 +28,7 @@ override_dh_auto_install:
 	# copy config files manually so we can add them to conffiles.
 	#
 	install -d $(DESTDIR)/etc/logstash
+	install -d $(DESTDIR)/etc/logstash/conf.d
 	install -m 0644 config/jvm.options $(DESTDIR)/etc/logstash/
 	install -m 0644 config/log4j2.properties $(DESTDIR)/etc/logstash/
 	install -m 0644 config/logstash.yml $(DESTDIR)/etc/logstash/

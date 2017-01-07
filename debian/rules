@@ -1,18 +1,41 @@
 #!/usr/bin/make -f
 
+#export DH_VERBOSE = 1
+
 export GEM_HOME=vendor/bundle/jruby/1.9
 export GEM_PATH=vendor/bundle/jruby/1.9/gems
 export JAVA_HOME=/usr/lib/jvm/default-java
 
+BUILDDIR := debian/logstash
+DESTDIR := $(CURDIR)/$(BUILDDIR)
+
 %:
 	dh $@
 
+override_dh_auto_clean:
+	[ -d $(BUILDDIR) ] && rm -r $(BUILDDIR)
+	dh_auto_clean $@
+
 override_dh_auto_build:
+	#
+	# install jruby gem dependencies.
+	#
 	vendor/jruby/bin/jruby vendor/bundle/jruby/1.9/bin/bundle install
+
+override_dh_auto_install:
+	dh_auto_install $@
+	#
+	# copy config files manually so we can add them to conffiles.
+	#
+	install -d $(DESTDIR)/etc/logstash
+	install -m 0644 config/jvm.options $(DESTDIR)/etc/logstash/
+	install -m 0644 config/log4j2.properties $(DESTDIR)/etc/logstash/
+	install -m 0644 config/logstash.yml $(DESTDIR)/etc/logstash/
+	install -m 0644 config/startup.options $(DESTDIR)/etc/logstash/
 
 override_dh_strip:
 
 override_dh_strip_nondeterminism:
 
 override_dh_shlibdeps:
-	dh_shlibdeps -Xlibjffi-1.2.so @
+	dh_shlibdeps -Xlibjffi-1.2.so $@

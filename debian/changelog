@@ -1,3 +1,61 @@
+logstash (5.1.1-1~unki.10) stretch; urgency=medium
+
+  * tweak systemd.service file
+  * create a symlink from /usr/share/logstash/config to /etc/logstash
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Sat, 07 Jan 2017 10:48:33 +0100
+
+logstash (5.1.1-1~unki.9) stretch; urgency=medium
+
+  * bump version number
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Sat, 07 Jan 2017 10:29:46 +0100
+
+logstash (5.1.1-1~unki.8) stretch; urgency=medium
+
+  * bump version number
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Sat, 07 Jan 2017 10:07:07 +0100
+
+logstash (5.1.1-1~unki.7) stretch; urgency=medium
+
+  * bump version number
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Sat, 07 Jan 2017 09:33:33 +0100
+
+logstash (5.1.1-1~unki.6) stretch; urgency=medium
+
+  * remove unnecessary quotes in logstash.service
+  * restart service if already configured.
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Sat, 07 Jan 2017 09:26:48 +0100
+
+logstash (5.1.1-1~unki.5) stretch; urgency=medium
+
+  * oops, reinclude the vendor directory
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Sat, 07 Jan 2017 07:39:26 +0100
+
+logstash (5.1.1-1~unki.4) stretch; urgency=medium
+
+  * skip the ruby dependencies, actually they are
+    required for the bundled jruby.
+  * so invoke bundle-install instead.
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Sat, 07 Jan 2017 07:35:25 +0100
+
+logstash (5.1.1-1~unki.3) stretch; urgency=medium
+
+  * add ruby-ci-reporter-rspec dependency
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Fri, 06 Jan 2017 16:52:31 +0100
+
+logstash (5.1.1-1~unki.2) stretch; urgency=medium
+
+  * include Gemfile
+
+ -- Andreas Unterkircher <unki@netshadow.net>  Fri, 06 Jan 2017 16:41:30 +0100
+
 logstash (5.1.1-1~unki.1) stretch; urgency=medium
 
   * package for upstream release 5.1.1

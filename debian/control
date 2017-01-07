@@ -2,7 +2,7 @@ Source: logstash
 Section: net
 Priority: optional
 Maintainer: Andreas Unterkircher <unki@netshadow.net>
-Build-Depends: debhelper (>= 9~)
+Build-Depends: debhelper (>= 9~), default-jre-headless
 Standards-Version: 3.8.3
 Homepage: https://www.elastic.co/de/products/logstash
 Vcs-browser: https://github.com/elastic/logstash
@@ -10,5 +10,5 @@ Vcs-git: https://github.com/elastic/logstash.git
 
 Package: logstash
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ruby-ci-reporter-rspec
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-jre-headless
 Description: Logstash - transport and process your logs, events, or other data

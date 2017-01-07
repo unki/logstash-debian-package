@@ -30,6 +30,12 @@ case "$1" in
         /etc/logstash/logstash.yml
       /usr/share/logstash/bin/system-install /etc/logstash/startup.options
       [ -e /etc/logstash/logstash.yml ] && systemctl restart logstash
+
+      [ -L /usr/share/logstash/config ] && \
+         [ "$(realpath /usr/share/logstash/config)" != "/etc/logstash" ] &&
+         rm -f /usr/share/logstash/config
+
+      [ -e /usr/share/logstash/config ] || ln -s /etc/logstash /usr/share/logstash/config
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)

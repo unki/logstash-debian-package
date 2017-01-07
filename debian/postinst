@@ -29,7 +29,7 @@ case "$1" in
          -e 's|# path.data:|path.data: /var/lib/logstash|' \
         /etc/logstash/logstash.yml
       /usr/share/logstash/bin/system-install /etc/logstash/startup.options
-      [ -e /etc/logstash/logstash.yml] && systemctl restart logstash
+      [ -e /etc/logstash/logstash.yml ] && systemctl restart logstash
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
